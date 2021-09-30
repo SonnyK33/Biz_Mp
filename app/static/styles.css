@@ -3,7 +3,7 @@
     background-color: #DDF;
     height: 100px
 } */
-
+/* 
 h1{
     height: 20px;
     color:blue
@@ -12,4 +12,92 @@ h1{
 p{
     height: 15px;
     color:black
+} */
+
+
+
+.grid,
+.col-1-3 {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color:black;  
+  color:white;
+  border: 1px dotted white;  
 }
+
+body {
+    background:#293f50;
+    color:#648880;
+    font-family:'Merriweather', serif;
+    font-fmaily:'Playfair Disply', serif;
+  }
+  
+  h1{
+      margin: 10px;
+      width: 400px;
+      height: 20px;
+      height: 20px;
+      color:#648880;  
+  }
+  
+  
+  p{
+      height: 35px;
+      margin: 50px;
+      font-size: 15px;
+      color:white;
+      font-family:'Merriweather', serif;
+      font-fmaily:'Playfair Disply', serif;    
+  }
+  
+  a {
+    font-size: 20px;
+    color:blue;
+  }
+  
+  a:hover {
+    color:red;
+  }
+  
+  footer {
+    clear: both;
+  }
+
+
+
+/* 
+#blogs {
+  
+  display: inline-block;
+  width: 30%;
+  margin: 0 1%;
+  background-color:black;  
+  color:white;
+  border: 1px dotted white;
+  vertical-align:top;
+}
+
+#listings {
+  display: inline-block;
+  width: 30%;
+  margin: 0 1%;
+  background-color:black;
+  color:white;  
+  border: 1px dotted white;
+  vertical-align:top;
+}
+
+#howitworks{
+  background-color:black;
+  color:white;
+  display: inline-block;
+  width: 30%;
+  padding: 1px;
+  margin: 0 1%;
+  border: 1px dotted white;
+  vertical-align:top;
+} */
+

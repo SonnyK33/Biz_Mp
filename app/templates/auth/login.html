@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap"
+            rel="stylesheet">   
+        
+        <title>Hi welcome to the biz marketplace!</title>
+    </head>
+
+    <body>
+        If you have an account, please login below:
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag()}}
+            <p>
+                {{ form.username.label }} <br>
+                {{ form.username(size=32)}}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32)}}
+            </p>
+            <p>
+                {{ form.remember_me.label }}<br>
+                {{ form.remember_me()}}
+            </p>
+            <p>
+                {{ form.submit() }}                
+            </p>      
+        </form>
+    
+    
+
+
+        New User? Click to register:
+
+
+    </body>
+
+</html>

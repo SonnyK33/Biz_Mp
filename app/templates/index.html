@@ -1,41 +1,57 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}"> -->
-        <link rel= "stylesheet" type= "text/css" href= "static/styles.css">
-
-        <title>{{title}} - BizMP</title>
-        Hi {{Users.username}} welcome to Biz Marketplace!
-    </head>
-        <body>
-            <header> 
-                <!-- <a href="index.html"> BizMp </a> -->
-                <a href="{{ url_for('main.index') }}"> BizMp </a>                
-                <nav> 
-                    <a href="Listings.html"> Listings </a>
-                    <a href="Login.html"> Login </a>
-                    <a href="Rates.html"> Login </a>
-                </nav>                                   
-            </header>
-            <h1> What is Biz Marketplace?</h1>
-
-            <p>Biz Marketplace is for buying and selling service businesses which have a strong link to the owner
-            For example, law, accounting, and other professional service firms where the owners
-            have a strong relationship with customers</p>
-
-            <article> Blog article #1: 5 steps to selling your business</article>
 
 
-            
+<head>
 
-            <footer> <small> &COPY; 2021 BizMP </small></footer>
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
 
-        </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap"
+        rel="stylesheet">
 
+    <title>{{title}} - BizMP</title>
+    Hi {{Users.username}} welcome to Biz Marketplace!
+</head>
+
+<body>
+    <header>
+
+        <a href="{{ url_for('main.index') }}"> BizMp </a>
+        <nav>
+            <a href="Listings.html"> Listings </a>
+            <a href = "/auth/login">Login</a>
+            <a href="{{ url_for('auth.login') }}"> Login </a>
+            <a href="Rates.html"> Rates </a>
+
+        </nav>
+        <br>
+
+    </header>
+    <h1> What is Biz Marketplace?</h1>
+
+    <p>Biz Marketplace is for buying and selling service businesses which have a strong link to the owner
+        For example, law, accounting, and other professional service firms where the owners
+        have a strong relationship with customers</p>
+
+    <article class='col-1-3'>
+        Blog articles
+        #1: 5 steps to selling your business</article>
+
+    <article class='col-1-3'>
+        Calgary, Canada - Law Office $xxx
+    </article>
+
+    <article class='col-1-3'>
+        1) Create account <br>
+        2) Decide how you want use BizMP <br>
+        3) Upload client info to create custom CRM system
+    </article>
+
+    <footer> <small> &COPY; 2021 BizMP </small></footer>
+
+</body>
 
 </html>
-
-
-<!-- layout of page - 
-listings on left, articles on right
-login top right -->
