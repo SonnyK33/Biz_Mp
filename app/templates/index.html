@@ -1,10 +1,10 @@
-<!-- <!DOCTYPE html> -->
+
 {% extends "base.html" %}
 {% block content %}
 
 
 
-<!-- <html> -->
+
 
 
 <head>
@@ -16,26 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap"
         rel="stylesheet">
 
-    <!-- <title>{{title}} - BizMP</title>
-    Hi {{Users.username}} welcome to Biz Marketplace! -->
+ 
 </head>
 
-<!-- <body> -->
-    <!-- <header>
-
-        <a href="{{ url_for('main.index') }}"> BizMp </a>
-        <nav>
-            <a href="Listings.html"> Listings </a>
-            <a href = "{{ url_for('auth.login') }}">Login</a>
-            
-            <a href="{{ url_for('auth.login') }}">> Login </a>
-            <a href="Rates.html"> Rates </a>
-
-        </nav>
-        <br>
-
-    </header> -->
-    <h1> What is Biz Marketplace?</h1>
+    <h1> Hi {{current_user.username}}</h1>
+    <h2> What is Biz Marketplace?</h2>
 
     <p>Biz Marketplace is for buying and selling service businesses which have a strong link to the owner
         For example, law, accounting, and other professional service firms where the owners
@@ -55,9 +40,9 @@
         3) Upload client info to create custom CRM system
     </article>
 
+    New User? Click to register:
+    <a href="{{ url_for('auth.register')}}"> Register</a>
+    
     <footer> <small> &COPY; 2021 BizMP </small></footer>
 
     {% endblock %}
-<!-- </body>
-
-</html> -->

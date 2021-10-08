@@ -1,21 +1,4 @@
 
- /* div#header {
-    background-color: #DDF;
-    height: 100px
-} */
-/* 
-h1{
-    height: 20px;
-    color:blue
-}
-
-p{
-    height: 15px;
-    color:black
-} */
-
-
-
 .grid,
 .col-1-3 {
   display: inline-block;
@@ -65,39 +48,4 @@ body {
   footer {
     clear: both;
   }
-
-
-
-/* 
-#blogs {
-  
-  display: inline-block;
-  width: 30%;
-  margin: 0 1%;
-  background-color:black;  
-  color:white;
-  border: 1px dotted white;
-  vertical-align:top;
-}
-
-#listings {
-  display: inline-block;
-  width: 30%;
-  margin: 0 1%;
-  background-color:black;
-  color:white;  
-  border: 1px dotted white;
-  vertical-align:top;
-}
-
-#howitworks{
-  background-color:black;
-  color:white;
-  display: inline-block;
-  width: 30%;
-  padding: 1px;
-  margin: 0 1%;
-  border: 1px dotted white;
-  vertical-align:top;
-} */
 

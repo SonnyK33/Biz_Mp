@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap"
+            rel="stylesheet">   
+        
+        <title>Hi welcome to the biz marketplace!</title>
+    </head>
+
+    <body>
+        Please register below
+        <form action="" method="post">
+            {{ form.hidden_tag()}}
+            <p>
+                {{ form.username.label }} <br>
+                {{ form.username(size=32)}}
+
+                {% for error in form.username.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.email.label }} <br>
+                {{ form.email(size=32)}}
+
+                {% for error in form.email.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+            
+            <p>
+                {{ form.firstname.label }} <br>
+                {{ form.firstname(size=32)}}
+
+                {% for error in form.firstname.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.lastname.label }} <br>
+                {{ form.lastname(size=32)}}
+
+                {% for error in form.lastname.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.password.label }} <br>
+                {{ form.password(size=32)}}
+
+                {% for error in form.password.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.password2.label }} <br>
+                {{ form.password2(size=32)}}
+
+                {% for error in form.password2.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+
+            <p>
+                {{ form.submit() }}                
+            </p>      
+        </form>
+    
+    
+
+        {% endblock %}
+
+
