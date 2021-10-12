@@ -43,11 +43,15 @@
                 {{ form.submit() }}                
             </p>      
         </form>
-    
-    
 
 
         New User? Click to register:
+        <a href="{{ url_for('auth.register')}}"> Register</a>
+    
+    
+
+
+        
 
         {% endblock %}
 
