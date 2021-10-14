@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap"
+            rel="stylesheet">   
+        
+        <title>Please enter the below information</title>
+    </head>
+
+    <body>
+        Please register below
+        <form action="" method="post">
+            {{ form.hidden_tag()}}
+            <p>
+                {{ form.bizname.label }} <br>
+                {{ form.bizname(size=32)}}
+
+                {% for error in form.bizname.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.city.label }} <br>
+                {{ form.city(size=32)}}
+
+                {% for error in form.city.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+            
+            <p>
+                {{ form.country.label }} <br>
+                {{ form.country(size=32)}}
+
+                {% for error in form.country.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{ form.description.label }} <br>
+                {{ form.description(size=256)}}
+
+                {% for error in form.description.errors %}
+                <span style="color: red;"> [{{ error }}]</span>
+                {% endfor %}
+            </p>
+
+            
+            <p>
+                {{ form.submit() }}  
+            </p>      
+        </form>
+    
+    
+
+        {% endblock %}
+
+

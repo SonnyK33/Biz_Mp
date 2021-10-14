@@ -1,3 +1,4 @@
+from flask.app import Flask
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
@@ -28,3 +29,14 @@ class UserRegistration(FlaskForm):
         returned_email = Users.query.filter_by(email=email.data).first()
         if returned_email is not None:
             raise ValidationError('please select a different email')
+
+class NewBiz(FlaskForm):
+    bizname = StringField('name of business', validators=[DataRequired()])
+    city = StringField('city', validators=[DataRequired()])
+    country = StringField('country', validators=[DataRequired()])
+    description = StringField('description', validators=[DataRequired()])
+    submit = SubmitField('submit')
+
+
+    def __repr__(self):
+        return '<listing {}>'.format(self.bizname)

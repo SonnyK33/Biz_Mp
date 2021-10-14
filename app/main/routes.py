@@ -5,7 +5,7 @@ from app.auth.forms import LoginForm
 from config import Config
 from flask import flash, redirect, url_for
 from flask_login import current_user, login_user, logout_user
-from app.models import Users
+from app.models import Listings, Users
 
 @bp.route('/')
 @bp.route('/index')
@@ -19,7 +19,13 @@ def index():
 def user(username):
     if current_user.is_authenticated:
       
-
         user = Users.query.filter_by(username=username).first_or_404()
         return render_template('user.html',user=user)
+
+@bp.route('/listings')
+def listings():    
+    listings = Listings.query.order_by(Listings.bizname.desc())
+    return render_template('listings.html',listings=listings)
+
+
 

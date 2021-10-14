@@ -13,7 +13,8 @@
             
             <a href="{{ url_for('main.index') }}"> BizMp </a>
             <nav>
-                <a href="Listings.html"> Listings </a>
+                <a href="{{ url_for('main.listings') }}"> Listings </a>
+                
                 
                 {% if current_user.is_anonymous %}    
                 <a href="{{url_for('auth.login') }}">Login</a>
