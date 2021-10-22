@@ -31,12 +31,12 @@ body {
       height: 35px;
       margin: 50px;
       font-size: 15px;
-      color:white;
+      color:black;
       font-family:'Merriweather', serif;
-      font-fmaily:'Playfair Disply', serif;    
+      
   }
   
-  a {
+  /* a {
     font-size: 20px;
     color:blue;
   }
@@ -44,7 +44,7 @@ body {
   a:hover {
     color:red;
   }
-  
+   */
   footer {
     clear: both;
   }

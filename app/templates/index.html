@@ -22,28 +22,30 @@
 </head>
 
     <h1> Hi {{current_user.username}}</h1>
-    <h2> What is Biz Marketplace?</h2>
+    <h2> Every business is an online business. Bring yours into the Internet age. Grow it or sell it - it's up to you.</h2>
 
     <p>Biz Marketplace is for buying and selling service businesses which have a strong link to the owner
         For example, law, accounting, and other professional service firms where the owners
         have a strong relationship with customers</p>
 
     <article class='col-1-3'>
-        Blog articles
-        #1: 5 steps to selling your business</article>
+       List and sell your business <br>
+       Get the metrics to assess your business and maximize its value </article>
 
     <article class='col-1-3'>
-        Calgary, Canada - Law Office $xxx
+        Grow your business <br>
+        Use our light-weight customer relationship system to transform your business into an online startup
     </article>
 
     <article class='col-1-3'>
-        1) Create account <br>
-        2) Decide how you want use BizMP <br>
-        3) Upload client info to create custom CRM system
+        Acquire a business <br>
+        Start your online empire today
+        
     </article>
 
-    New User? Click to register:
-    <a href="{{ url_for('auth.register')}}"> New User</a>
+    <!-- New User? Click to register: -->
+    <!-- <a href="{{ url_for('auth.register')}}"> New User</a> -->
+    <button type="button" class="btn btn-primary">New Business</button>
     <a href="{{ url_for('auth.newbiz')}}"> New Business</a>
     
     <footer> <small> &COPY; 2021 BizMP </small></footer>
