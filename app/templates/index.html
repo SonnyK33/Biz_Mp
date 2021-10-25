@@ -21,8 +21,77 @@
  
 </head>
 
-    <h1> Hi {{current_user.username}}</h1>
-    <h2> Every business is an online business. Bring yours into the Internet age. Grow it or sell it - it's up to you.</h2>
+    <div class="container col-x1-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg 7 text-center text-lg start">
+                <h1 class="display-4 fw-bold lh-1 mb-3"> Every business is an online business. Bring yours into the Internet age.</h1>
+                <p class="lg-10 fs-4"> BMP is a marketplace for owner-centered businesses. Acquire. Grow. Sell. </p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <div class="checkbox mb-3">
+                    <label>
+                      <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                  </div>
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                  <hr class="my-4">
+                  <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">BMP serves entrepreneurs looking to acquire something new, automate and grow their existing business, or sell their lifetime of work</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+            </div>
+            <h2>Grow your business</h2>
+            <p>Use our light-weight customer relationship system to transform your business into an online startup</p>
+            <a href="#" class="icon-link">
+              Grow
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+            </a>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
+            </div>
+            <h2>List and sell your business</h2>
+            <p>Get the metrics to assess your business and maximize its value</p>
+            <a href="#" class="icon-link">
+              List
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+            </a>
+          </div>
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            </div>
+            <h2>Acquire a business</h2>
+            <p>Search through our catalog of fast growing business and start building your empire</p>
+            <a href="#" class="icon-link">
+              Acquire
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    
+
+<!--     
 
     <p>Biz Marketplace is for buying and selling service businesses which have a strong link to the owner
         For example, law, accounting, and other professional service firms where the owners
@@ -41,7 +110,7 @@
         Acquire a business <br>
         Start your online empire today
         
-    </article>
+    </article> -->
 
     <!-- New User? Click to register: -->
     <!-- <a href="{{ url_for('auth.register')}}"> New User</a> -->

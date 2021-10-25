@@ -12,13 +12,13 @@
 }
 
 body {
-    background:#293f50;
+    background:#293f50;    
     color:#648880;
     font-family:'Merriweather', serif;
     font-fmaily:'Playfair Disply', serif;
   }
   
-  h1{
+  /* h1{
       margin: 10px;
       width: 400px;
       height: 20px;
@@ -35,7 +35,7 @@ body {
       font-family:'Merriweather', serif;
       
   }
-  
+   */
   /* a {
     font-size: 20px;
     color:blue;
