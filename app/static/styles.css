@@ -18,6 +18,11 @@ body {
     font-fmaily:'Playfair Disply', serif;
   }
   
+h2 {
+  color: #00FFF2;
+}
+
+
   /* h1{
       margin: 10px;
       width: 400px;
@@ -25,15 +30,10 @@ body {
       height: 20px;
       color:#648880;  
   }
-  
+   */
   
   p{
-      height: 35px;
-      margin: 50px;
-      font-size: 15px;
-      color:black;
-      font-family:'Merriweather', serif;
-      
+      color:white;          
   }
    */
   /* a {
@@ -44,7 +44,7 @@ body {
   a:hover {
     color:red;
   }
-   */
+  
   footer {
     clear: both;
   }
