@@ -34,8 +34,7 @@ def logout():
     return redirect(url_for('main.index'))
 
 
-
-# need to modify database to get first and last name
+@bp.route('/')
 @bp.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated:
@@ -47,8 +46,10 @@ def register():
         user = Users(username=form.username.data,email=form.email.data)                
         user.set_password(form.password.data)
         db.session.add(user)
-        db.session.commit()           
+        db.session.commit() 
+        flash('new user committed')          
         return redirect(url_for('auth.login'))
+    else: flash('error')
 
     return render_template('auth/register.html', title='register', form=form)
 
