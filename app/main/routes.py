@@ -7,11 +7,12 @@ from flask import flash, redirect, url_for
 from flask_login import current_user, login_user, logout_user
 from app.models import Listings, Users
 
+#template to be changed - should be first page post-logging in
+
 @bp.route('/')
 @bp.route('/index')
 @login_required
-def index():
-    
+def index():    
     return render_template('index.html',title="Home",Users=Users)
 
 @bp.route('/user/<username>')

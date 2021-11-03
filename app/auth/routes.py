@@ -23,7 +23,11 @@ def login():
             flash('invalid credentials')            
             return redirect ('login')
         login_user(user, remember=form.remember_me.data)
-        return redirect(url_for('main.index'))
+        # return redirect(url_for('main.index'))
+        # return redirect(url_for('main.user', username=user))
+        return render_template('user.html',user=user)
+
+        
 
     return render_template('auth/login.html',title='login',form=form)
 
@@ -68,6 +72,7 @@ def newbiz():
     return render_template('auth/newbusiness.html', title='new business', form=form)
 
         
+
 
 
 
