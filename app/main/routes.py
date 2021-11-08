@@ -1,3 +1,4 @@
+from app import db
 from flask.templating import render_template
 from flask_login.utils import login_required
 from app.main import bp
@@ -23,10 +24,12 @@ def user(username):
         user = Users.query.filter_by(username=username).first_or_404()
         return render_template('user.html',user=user)
 
+
 @bp.route('/listings')
 def listings():    
     listings = Listings.query.order_by(Listings.bizname.desc())
-    return render_template('listings.html',listings=listings)
+    user_email=db.session.query(Listings).join(Users)
+    return render_template('listings.html',listings=listings,email=user_email.all())
 
 
 

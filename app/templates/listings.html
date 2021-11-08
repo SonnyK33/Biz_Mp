@@ -2,6 +2,9 @@
 {% block content %}
 
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 
@@ -15,7 +18,7 @@
 
 
 
-
+<!-- 
 <div class="row">
 {% for listing in listings %}
     <div class="col-lg-4", style="background-color:blue; margin: 10px; border: 5px solid">        
@@ -23,7 +26,7 @@
         {{ listing.description }} ( {{ listing.city }}, {{ listing.country }})
     </div>
 {% endfor %}
-</div>
+</div> -->
 
 
 <div class="album py-5 bg-light">
@@ -32,16 +35,26 @@
         {% for listing in listings %}
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              <image 
+              width="500" 
+              height="250" 
+              xlink:href="/static/flowers.jpg" 
+              clip-path="url(#circleView)" />
+            </svg>
 
             <div class="card-body">
-              <p class="card-text">
+              <p class="card-text" style="color: cornflowerblue">
                 {{ listing.bizname }}
                 {{ listing.description }} ( {{ listing.city }}, {{ listing.country }}</p>                                                    
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Contact</button>
+                  <a href = {{ listing.user_id.email}} ></a>
+                  <!-- <a href ="mailto:sonny.kushwaha@gmail.com"> -->
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Contact</button>
+                  </a>
+                  
                 </div>
                 <small class="text-muted">9 mins</small>
               </div>
