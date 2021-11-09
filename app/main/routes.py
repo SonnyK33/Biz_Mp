@@ -27,9 +27,17 @@ def user(username):
 
 @bp.route('/listings')
 def listings():    
-    listings = Listings.query.order_by(Listings.bizname.desc())
-    user_email=db.session.query(Listings).join(Users)
-    return render_template('listings.html',listings=listings,email=user_email.all())
+    # listings = Listings.query.order_by(Listings.bizname.desc())
+    listings = Listings.query.join(Users).order_by(Listings.bizname.desc())
+
+    
+
+    # user_email=db.session.query(Listings).join(Users)
+    # email = Users.query.join(Listings).order_by(Listings.bizname.desc())
+    email = Users.query.join(Listings)
+    e = {i: email.filter(Users.id==i.user_id).first().email for i in listings}
+    # email = Users.query.join(Listings).filter(Users.id==Listings.user_id)   
+    return render_template('listings.html',listings=listings,e=e)
 
 
 
