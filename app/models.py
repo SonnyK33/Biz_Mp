@@ -19,6 +19,13 @@ class Users(UserMixin, db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash,password)
 
+    def to_dict(self):
+        data = {
+            'id': self.id,
+            'username': self.username
+        }
+        return data
+
     
 
 class Listings(db.Model):
@@ -34,9 +41,17 @@ class Listings(db.Model):
     def __repr__(self):
         return '<listing {}>'.format(self.bizname)
 
+    def to_dict(self):
+        data = {
+            'bizname': self.bizname,
+            'description': self.description
+        }
+        return data
+
 
 @login.user_loader
 def load_user(id):
     return Users.query.get(int(id))
+
 
 

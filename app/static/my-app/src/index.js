@@ -1,17 +1,15 @@
-import React, {useEffect} from 'react';
-
-function App() {
-useEffect(() => {
-  fetch('/users').then(response => response.json().then(data => 
-    {console.log(data);
-    })
-  );
+import {useEffect} from 'react';
 
 
-  return () => {
-    cleanup
-  }
-}, [input])}
+
+// import { square, diag } from 'lib';
+// var square = require('lib').square;
+
+
+//   return () => {
+//     cleanup
+//   }
+// }, [input])}
 
 
 
@@ -118,3 +116,27 @@ class Square extends React.Component {
     document.getElementById('root')
   );
   
+
+
+
+  // var useEffect = require('react').useEffect
+
+  function App() {
+    useEffect(() => {
+      fetch('/users/1').then(response => response.json().then(data => 
+        {console.log(data);
+        })
+      );
+    }, []);
+    
+    return (
+    <div className="App">
+      </div>
+      );
+    }
+    
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root')
+    );
+    

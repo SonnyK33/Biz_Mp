@@ -4,7 +4,7 @@ from flask_login.utils import login_required
 from app.main import bp
 from app.auth.forms import LoginForm
 from config import Config
-from flask import flash, redirect, url_for
+from flask import flash, redirect, url_for, jsonify
 from flask_login import current_user, login_user, logout_user
 from app.models import Listings, Users
 
@@ -38,6 +38,15 @@ def listings():
     e = {i: email.filter(Users.id==i.user_id).first().email for i in listings}
     # email = Users.query.join(Listings).filter(Users.id==Listings.user_id)   
     return render_template('listings.html',listings=listings,e=e)
+    
 
 
+# this isn't working in api directory; not sure why
+@bp.route('/users/<int:id>', methods=['GET'])
+def get_user_api(id):  
+    return jsonify(Users.query.get_or_404(id).to_dict())
+
+@bp.route('/listings-api/<int:id>', methods=['GET']) 
+def get_listings(id):   
+    return jsonify(Listings.query.get_or_404(id).to_dict())
 
