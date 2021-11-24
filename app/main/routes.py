@@ -7,6 +7,7 @@ from config import Config
 from flask import flash, redirect, url_for, jsonify
 from flask_login import current_user, login_user, logout_user
 from app.models import Listings, Users
+import time
 
 #template to be changed - should be first page post-logging in
 
@@ -49,4 +50,8 @@ def get_user_api(id):
 @bp.route('/listings-api/<int:id>', methods=['GET']) 
 def get_listings(id):   
     return jsonify(Listings.query.get_or_404(id).to_dict())
+
+@bp.route('/time')
+def get_current_time():
+    return {'time': time.time()}
 

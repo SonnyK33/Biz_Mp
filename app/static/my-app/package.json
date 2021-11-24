@@ -44,6 +44,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.44.2"
+    
   }
 }
