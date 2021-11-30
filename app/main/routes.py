@@ -20,10 +20,12 @@ def index():
 @bp.route('/user/<username>')
 @login_required
 def user(username):
+    
     if current_user.is_authenticated:
+        listings = Listings.query.join(Users).filter(Users.username==username)
       
         user = Users.query.filter_by(username=username).first_or_404()
-        return render_template('user.html',user=user)
+        return render_template('user.html',user=user,listings=listings)
 
 
 @bp.route('/listings')

@@ -22,7 +22,8 @@
 
 <a href="edit.html"> Edit [Existing Business]</a> <br>
 <a href="{{ url_for('auth.newbiz') }}"> Register a new business</a>
-<h2> What is Biz Marketplace?</h2>
+<h2> What is Biz Marketplace? </h2>
+
 
 
 
@@ -40,7 +41,11 @@
         <br><br><br><br><br><br><br><br><br><br>
       </div>
       <div class="bg-light border rounded-3">
-        Analytics for [bizname]
+        <strong>Analytics </strong> 
+        
+        {% for listing in listings %}
+        {{listing.bizname}} {{listing.city}} {{listing.description}}
+        {% endfor %}
         <br><br><br><br><br><br><br><br><br><br>
       </div>
     </div>
@@ -49,7 +54,7 @@
   <div class="b-example-divider"></div>
 
 
-
+  
 
 
 
